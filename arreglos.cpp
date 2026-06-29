@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 //	Implementa funciones
+
+// Cambio externo
 int sumaArreglo(int arr[], int n){
 	int suma = 0;  
 	for(int i = 0;i < n;suma += arr[i++]);
@@ -125,7 +127,7 @@ void insertionSort(int arr[], int n){
 
 void merge(int arr[], int inicio, int mit, int fin){
 	int i = 0, j = 0;
-	int k = inicio;  // ? Empieza a escribir desde la posiciÛn actual
+	int k = inicio;  // ? Empieza a escribir desde la posici√≥n actual
 	int n1 = mit - inicio + 1;
 	int n2 = fin - mit; 
 	
@@ -135,7 +137,7 @@ void merge(int arr[], int inicio, int mit, int fin){
 	for(i = 0; i < n1; i++) 
 		arrIzq[i] = arr[inicio + i]; 
 	for(i = 0; i < n2; i++) 
-		arrDer[i] = arr[mit + 1 + i]; // ? Õndice corregido
+		arrDer[i] = arr[mit + 1 + i]; // ? √çndice corregido
 	
 	i = 0;
 	while(i < n1 && j < n2){
@@ -146,7 +148,7 @@ void merge(int arr[], int inicio, int mit, int fin){
 			arr[k] = arrDer[j]; 
 			j++; // ? Solo avanzas j si tomas de derecho
 		}
-		k++; // Siempre avanzas la posiciÛn de escritura
+		k++; // Siempre avanzas la posici√≥n de escritura
 	} 
 	
 	// Copia los elementos restantes
@@ -158,7 +160,7 @@ void merge(int arr[], int inicio, int mit, int fin){
 }
 
 void mergeSort(int arr[], int inicio, int fin){
-	if(inicio >= fin) return; // ? CondiciÛn al inicio para mayor claridad
+	if(inicio >= fin) return; // ? Condici√≥n al inicio para mayor claridad
 	
 	int mit = (inicio + fin) / 2; 
 	
